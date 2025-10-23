@@ -1,6 +1,3 @@
-from operator import truediv
-
-
 def line_Seq():
 
     lines = ""
