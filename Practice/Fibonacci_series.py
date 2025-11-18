@@ -11,3 +11,14 @@ def Fib(Fib_sequence):
 Fib_sequence = [0, 1]
 result = Fib(Fib_sequence)
 print(result)
+
+##########################
+# fib_list = [0, 1, 1]
+#
+# while True:
+#     new_num = fib_list[-1] + fib_list[-2]
+#     if new_num > 50:
+#         break
+#     else:
+#         fib_list.append(new_num)
+# print(fib_list)
