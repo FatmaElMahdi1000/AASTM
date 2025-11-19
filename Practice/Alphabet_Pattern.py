@@ -4,7 +4,6 @@
 #         print("*" * 7)
 #     else:
 #         print(" " * (7 - r) + "*")
-
 #T shape
 for r in range(1, 6):
     if r == 1:
