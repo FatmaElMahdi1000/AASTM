@@ -1,4 +1,5 @@
 import pandas as pd
+from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 import matplotlib.pyplot as pt
 import numpy as np
 
@@ -41,13 +42,24 @@ Median_age = df['age'].median()
 df['age'] = df['age'].fillna(Median_age).astype(int)
 #Name col. has NaN Name, let's make it unknown
 df['name'] = df['name'].fillna('unknown')
-print(df)
+# print(df)
 
 #check duplicates and let's remove
-print(df.duplicated()) #2 rows are duplicated
+# print(df.duplicated()) #2 rows are duplicated
 df.drop_duplicates(inplace=True)
 
-df.to_csv('employee_data_cleaned.csv', index=False)
+# df.to_csv('employee_data_cleaned.csv', index=False)
 
+#Data Transformation of Name into Numbers as Machine Models don't understand text
+le = LabelEncoder()
+df['name'] = le.fit_transform(df['name'])
+print(df)
 
+#Value Scaling
+#Min–Max Scaling is used to rescale numerical data to a fixed range, usually 0 to 1, so models can learn properly.
+# the dataset for machine learning models must all features/numbers in columns contribute fairly.
 
+scaler = MinMaxScaler()
+df['salary'] = scaler.fit_transform(df[['salary']])
+df['age'] = scaler.fit_transform(df[['age']])
+print(df)
