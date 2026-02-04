@@ -1,0 +1,5 @@
+SaleID,Date,CustomerID,Product,Qty,UnitPrice
+F001,2026-02-02,102,Headset,1,60
+F002,2026-02-04,105,Laptop,1,1400
+F003,2026-02-08,101,Mouse,1,20
+J003,2026-01-10,103,Keyboard,1,45
