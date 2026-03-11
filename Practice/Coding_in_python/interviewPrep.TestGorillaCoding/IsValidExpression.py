@@ -1,6 +1,3 @@
-from sqlalchemy import false
-
-
 def isValidExpression(exp):
     br_table = {"}": "{", "]": "[" ,")": "("}
     stack = [] #for storing opening brackets

@@ -3,6 +3,7 @@ def getMaxChars(s):
     for char in s:
         if not char.isspace():
             Frequency[char] = Frequency.get(char, 0) + 1
+                                         #x[1] means maximum based on the value not the key
     max_item = max(Frequency.items(), key=lambda x: x[1])
     return max_item[0]
 
